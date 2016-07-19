@@ -28,3 +28,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 call plug#end()
+
+" Unified color scheme (default: dark)
+let g:seoul256_background = 233
+colo seoul256
