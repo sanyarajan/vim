@@ -26,4 +26,5 @@ set history=100 "by default Vim saves your last 8 commands.  We can handle more
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
 call plug#end()
