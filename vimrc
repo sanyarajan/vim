@@ -23,3 +23,7 @@ set number
 set hidden
 
 set history=100 "by default Vim saves your last 8 commands.  We can handle more
+
+call plug#begin()
+Plug 'tpope/vim-sensible'
+call plug#end()
