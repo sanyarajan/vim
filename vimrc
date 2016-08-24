@@ -24,12 +24,34 @@ set hidden
 
 set history=100 "by default Vim saves your last 8 commands.  We can handle more
 
+set hls
+
+set shiftwidth=4 softtabstop=4 expandtab
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'junegunn/seoul256.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
 Plug 'wincent/terminus'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/syntastic'
 call plug#end()
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Unified color scheme (default: dark)
 let g:seoul256_background = 233
 colo seoul256
+
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
