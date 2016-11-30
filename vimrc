@@ -55,3 +55,9 @@ colo seoul256
 
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+
+if &diff
+    " ignore whitespace in diff mode
+    set diffopt+=iwhite
+endif
